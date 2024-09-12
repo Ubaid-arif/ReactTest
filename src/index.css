@@ -315,7 +315,7 @@ justify-content: center;
 }
 
 .scrollButton {
-  background-color:  var(--orange);
+  background-color:   #7D818B;
   border: none;
   color: white;
   font-size: 24px;
@@ -337,5 +337,81 @@ justify-content: center;
 }
 
 .scrollButton:hover {
-  background-color: var(--orange)
+  background-color: black
 }
+
+
+/* card section */
+.cardSectionMain{
+
+}
+
+/* card section */
+
+
+/* detailComponentMain */
+
+.detailComponentMain{
+  text-align: center;
+  /* background-color: red; */
+  padding: 0px 350px;
+}
+
+.detailComponentMain p:nth-child(1) {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.detailComponentMain p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color : #7D818B
+}
+
+/* detailComponentMain */
+
+.mainBox{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ justify-items: center;
+  justify-content: space-evenly;
+}
+
+
+/* ==========card style========== */
+.cardMainContainer{
+  border: 1px solid #D7D7D7;
+  border-radius:  50px 0px 50px 0px; 
+  padding: 30px;
+  height: 523;
+  width: 25%;
+  display: flex;
+ flex-direction: column;
+ padding-top: 40px;
+}
+
+.cardMainContainer :nth-child(2) {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color : black
+}
+
+.cardMainContainer :nth-child(3) {
+  font-size: 14px;
+  font-weight: 400;
+  color : #696969
+}
+
+.cardMainContainer :nth-child(4) {
+  font-size: 14px;
+  font-weight: 600;
+  color : black
+}
+.cardMainContainer :nth-child(5) {
+  font-size: 14px;
+  font-weight: 600;
+  color : black
+}
+/* ==========card style========== */

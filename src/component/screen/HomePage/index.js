@@ -10,7 +10,7 @@ const HomePage = () => {
       <Slider />
       <VideoSection />
       <RatingSection />
-      {/* <CardSection /> */}
+      <CardSection />
       {/* <StepSection /> */}
     </>
   );
