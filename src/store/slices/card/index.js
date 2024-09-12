@@ -1,21 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  products: [], // Store the products array here
+  loading: false,
+  error: null,
 };
 
 export const cardSlice = createSlice({
   name: "card",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    fetchProductsStart: (state) => {
+      state.loading = true;
+      state.error = null;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    fetchProductsSuccess: (state, action) => {
+      state.products = action.payload;
+      state.loading = false;
+    },
+    fetchProductsFailure: (state, action) => {
+      state.error = action.payload;
+      state.loading = false;
     },
   },
 });
 
-export const { increment, decrement } = cardSlice.actions;
+export const {
+  fetchProductsStart,
+  fetchProductsSuccess,
+  fetchProductsFailure,
+} = cardSlice.actions;
 export default cardSlice.reducer;

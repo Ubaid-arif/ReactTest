@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { getAllProduct } from "../../../api";
 import { DetailComponent } from "../../common";
 import cardimage1 from "../../../assets/image/card1.png";
 import cardimage2 from "../../../assets/image/card2.png";
 import cardimage3 from "../../../assets/image/card3.png";
+import {
+  fetchProductsStart,
+  fetchProductsSuccess,
+  fetchProductsFailure,
+} from "../../../store/slices/card";
 
 const staticCardData = [
   {
@@ -43,20 +49,22 @@ const Card = ({ image, title, description, time, cost }) => (
 );
 
 const CardSection = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector((state) => state.card);
 
   useEffect(() => {
     const fetchProducts = async () => {
+      dispatch(fetchProductsStart());
       try {
         const response = await getAllProduct();
-        setProducts(response.slice(0, 3));
+        dispatch(fetchProductsSuccess(response.slice(0, 3)));
       } catch (error) {
-        console.error("Error fetching products:", error);
+        dispatch(fetchProductsFailure(error.toString()));
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="cardSectionMain">
@@ -68,6 +76,8 @@ const CardSection = () => {
       </div>
 
       <div className="mainBox">
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
         {products.map((product) => (
           <Card
             key={product.id}
