@@ -5,7 +5,7 @@ import cardimage1 from "../../../assets/image/card1.png";
 import cardimage2 from "../../../assets/image/card2.png";
 import cardimage3 from "../../../assets/image/card3.png";
 
-const cardData = [
+const staticCardData = [
   {
     image: cardimage3,
     title: "Mobile App Development",
@@ -34,7 +34,7 @@ const cardData = [
 
 const Card = ({ image, title, description, time, cost }) => (
   <div className="cardMainContainer">
-    <img src={image} width="330px" height="92.41px" alt={title} />
+    <img className="cardImage" src={image} alt={title} />
     <p>{title}</p>
     <p>{description}</p>
     <p>Average Time: {time}</p>
@@ -49,8 +49,7 @@ const CardSection = () => {
     const fetchProducts = async () => {
       try {
         const response = await getAllProduct();
-        console.log(response)
-        setProducts(response);
+        setProducts(response.slice(0, 3));
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -63,31 +62,23 @@ const CardSection = () => {
     <div className="cardSectionMain">
       <DetailComponent />
       <div className="mainBox">
-        {cardData.map((card, index) => (
+        {staticCardData.map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </div>
 
-      {products.length > 0 ? (
-        products.map((product) => (
-          <div key={product.id} className="productCard">
-            <h3>{product.title}</h3>
-            <p>
-              <strong>Price:</strong> ${product.price}
-            </p>
-            <p>
-              <strong>Category:</strong> {product.category}
-            </p>
-            <img src={product.image} alt={product.title} width="150px" />
-            <p>
-              <strong>Rating:</strong> {product.rating.rate} (
-              {product.rating.count} reviews)
-            </p>
-          </div>
-        ))
-      ) : (
-        <p>No products available.</p>
-      )}
+      <div className="mainBox">
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+            time={`${Math.round(product.rating.rate)} days`}
+            cost={`$${product.price.toFixed(2)}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
