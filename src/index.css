@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --orange: #DC5F00;
+  --blackPearl: #373A40;
+  --offWhite: #F8F8F8;
+  --gray : #373A40
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  height: 100%;
 }
+
+#root {
+  height: 100%;
+  background-color: var(--blackBg);
+}
+
+/* Basic Style */
+/* ================ Font Sizes ================ */
+.fontSize9 {
+  font-size: 9px;
+}
+
+.fontSize10 {
+  font-size: 10px;
+}
+
+.fontSize12 {
+  font-size: 12px;
+}
+
+.fontSize14 {
+  font-size: 14px;
+}
+
+.fontSize15 {
+  font-size: 15px;
+}
+
+
+
+/* ================ Font Sizes ================ */
+
+
+/* ================ Font Weight ================ */
+
+
+.fontWeight500 {
+  font-weight: 500;
+}
+
+.fontWeight400 {
+  font-weight: 400;
+}
+
+
+
+/* ================ Font Weight ================ */
+
+/* ================ Margin Bottom ================ */
+.marBot0 {
+  margin-bottom: 0px;
+}
+/* ================ Margin Bottom ================ */
+
+/* ================ Text Truncate ================ */
+.OneLineTruncate {
+  display: -webkit-box;
+  /* max-width: 50%; */
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: initial;
+}
+
+/* ================ Text Truncate ================ */
+
+/* ================flex ================ */
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifySpacebetween {
+  justify-content: space-between;
+}
+
+.justifyevenly {
+  justify-content: space-evenly;
+}
+
+.rowConatainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.alignCenter {
+  align-items: center;
+}
+/* ================flex ================ */
