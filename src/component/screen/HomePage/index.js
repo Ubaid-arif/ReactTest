@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, StepSection } from "../../common";
+import { Header, RatingSection, StepSection, VideoSection } from "../../common";
 import Slider from "../Slider";
 import CardSection from "../CardSection";
 
@@ -8,6 +8,8 @@ const HomePage = () => {
     <>
       <Header />
       <Slider />
+      <VideoSection />
+      <RatingSection />
       {/* <CardSection /> */}
       {/* <StepSection /> */}
     </>
