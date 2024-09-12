@@ -1,5 +1,12 @@
 import React from "react";
-import { Header, RatingSection, StepSection, VideoSection } from "../../common";
+import {
+  AboutSection,
+  Header,
+  RatingSection,
+  StepSection,
+  TechInsight,
+  VideoSection,
+} from "../../common";
 import Slider from "../Slider";
 import CardSection from "../CardSection";
 
@@ -11,7 +18,9 @@ const HomePage = () => {
       <VideoSection />
       <RatingSection />
       <CardSection />
-      {/* <StepSection /> */}
+      <StepSection />
+      <AboutSection />
+      <TechInsight />
     </>
   );
 };

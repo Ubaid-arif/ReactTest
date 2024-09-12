@@ -423,3 +423,140 @@ justify-content: center;
   color : black
 }
 /* ==========card style========== */
+
+
+/* =============step selection============= */
+
+
+
+/* =============step selection============= */
+
+/* ================== About Section ============================ */
+.aboutSectionMain {
+  width: 100%;
+  background-color: #373a40;
+  padding: 50px 0;
+}
+
+.aboutTitle {
+  color: white;
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.aboutCardContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+}
+
+.aboutCard {
+  background-color: white;
+  border: 1px solid #d7d7d7;
+  border-radius: 0 30px 0 30px;
+  height: 327; 
+  width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.aboutCard img {
+  margin-bottom: 10px;
+}
+
+.aboutCardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2C3E52;
+  margin-bottom: 5px;
+  padding: 0px 10px;
+}
+
+.aboutCardDescription {
+  font-size: 14px;
+  color: #696969;
+  padding: 0px 10px;
+}
+.frameBox{
+  margin: 50px 0px;
+}
+/* ================== About Section ============================ */
+
+
+
+/* ================techInsight============================= */
+/* ================ techInsight ============================= */
+.techInsightMainContainer {
+  padding: 20px;
+}
+
+.techInsightMainContainer .title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+.cardBox {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.techcard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 25%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.techcard img {
+  width: 100%;
+  height: auto;
+}
+
+.techcard :nth-child(2){
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.techcard :nth-child(3){
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+.techcard :nth-child(4){
+  font-size: 12px;
+  color: #696969;
+}
+
+.button {
+
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--orange);
+  border-radius: 35px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+/* ================ techInsight ============================= */
+
+
+/* ================techInsight============================= */
