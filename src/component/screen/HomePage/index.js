@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      {/* <Slider /> */}
+      <Slider />
       {/* <CardSection /> */}
       {/* <StepSection /> */}
     </>

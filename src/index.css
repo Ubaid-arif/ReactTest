@@ -15,7 +15,8 @@
 
 body {
   height: 100%;
-  font-family: 'Maxima Nouva', sans-serif;}
+  font-family: 'Maxima Nouva', sans-serif;
+background-color: #F8F8F8;}
 #root {
   height: 100%;
   background-color: var(--blackBg);
@@ -130,7 +131,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 /* Header */
@@ -180,10 +181,50 @@ body {
 }
 
 
+.silderMainComponent{
+  display: flex;
+flex-direction: row;
+  background-color: white;
+  height: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+.leftContainer{
+  width: 80%;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px ;
+  padding-right: 450px;
+}
+.textConatiner{
+}
 
+.rightContainer{
+  width: 20%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.insindeConatiner{
+ width: 45.37px;
+ /* height:577.37px ;  */
+ 
+}
 
+.insindeConatiner p {
+  color :  black;
+  writing-mode: vertical-rl; 
+  text-orientation:sideways;
+  transform: rotate(180deg);
 
+}
+
+.mainText{
+  font-size: 100px;
+  font-weight: 700;
+}
 
 
 
