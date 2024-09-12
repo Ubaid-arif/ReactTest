@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../common";
+import { Header, StepSection } from "../../common";
 import Slider from "../Slider";
 import CardSection from "../CardSection";
 
@@ -9,6 +9,7 @@ const HomePage = () => {
       <Header />
       {/* <Slider /> */}
       {/* <CardSection /> */}
+      {/* <StepSection /> */}
     </>
   );
 };
