@@ -5,3 +5,5 @@ export { default as RatingSection } from "./RatingSection";
 export { default as DetailComponent } from "./DetailComponent";
 export { default as AboutSection } from "./AboutSection";
 export { default as TechInsight } from "./TechInsight";
+export { default as Testimonials } from "./Testimonials";
+export { default as MapSection } from "./MapSection";

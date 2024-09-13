@@ -2,9 +2,11 @@ import React from "react";
 import {
   AboutSection,
   Header,
+  MapSection,
   RatingSection,
   StepSection,
   TechInsight,
+  Testimonials,
   VideoSection,
 } from "../../common";
 import Slider from "../Slider";
@@ -21,6 +23,8 @@ const HomePage = () => {
       <StepSection />
       <AboutSection />
       <TechInsight />
+      <Testimonials />
+      <MapSection />
     </>
   );
 };
