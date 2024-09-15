@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AboutSection,
+  CheckoutButton,
   Header,
   MapSection,
   RatingSection,
@@ -18,13 +19,14 @@ const HomePage = () => {
       <Header />
       <Slider />
       <VideoSection />
-      <RatingSection />
-      <CardSection />
-      <StepSection />
-      <AboutSection />
+      {/* <RatingSection /> */}
+      {/* <CardSection /> */}
+      <CheckoutButton />
+      {/* <StepSection /> */}
+      {/* <AboutSection />
       <TechInsight />
       <Testimonials />
-      <MapSection />
+      <MapSection /> */}
     </>
   );
 };

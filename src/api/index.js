@@ -23,7 +23,9 @@ export const handleApi = async (axiosPromise) => {
     throw err;
   }
 };
-console.log("API_ENDPOINTS.GET_ALL_PRODUCT");
 
 export const getAllProduct = (payload) =>
   handleApi(Axios.get(API_ENDPOINTS.GET_ALL_PRODUCT, { params: payload }));
+
+export const getPayment = (payload) =>
+  handleApi(Axios.post(API_ENDPOINTS.GET_PAYMENT_PROCESS, { params: payload }));
